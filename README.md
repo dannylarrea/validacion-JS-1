@@ -1,2 +1,6 @@
-# validaci-n-JS
-https://www.mclibre.org/consultar/php/ejercicios/con-formularios/validacion/validacion-3.php?valores%5B1%5D=&amp;valores%5B2%5D=&amp;valores%5B3%5D=&amp;valores%5B4%5D=&amp;numeroValores=4&amp;quitar=Quitar+valor
+# validación-JS
+Escribe un programa que valide de 2 a 10 valores numéricos y que conste de una única página.
+- La página solicita los datos y los valida.
+- Si los datos no son válidos, indica que los datos no válidos y los datos sin escribir.
+- Si los datos son válidos, los datos se envían. 
+- Si se aumenta o reduce el número de valores, se siguen mostrando los valores ya introducidos (salvo el eliminado si se ha eliminado alguno).
