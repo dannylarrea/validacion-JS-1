@@ -1,3 +1,7 @@
 #values>div {
     padding: 10px;
 }
+
+.num {
+    border: solid black 1px;
+}
