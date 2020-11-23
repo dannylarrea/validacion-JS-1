@@ -1,7 +1,9 @@
-#values>div {
-    padding: 10px;
+input[type=text],
+input[type=date],
+input[type=number] {
+    border: solid black 1px;
 }
 
-.num {
-    border: solid black 1px;
+div {
+    padding: 10px;
 }

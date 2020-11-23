@@ -3,7 +3,7 @@ window.onload = function() {
     document.getElementById('del-input').addEventListener("click", delInput);
     document.getElementById('dni').addEventListener("focusout", validarDNI);
     document.getElementById('nac').addEventListener("focusout", categoria)
-        //document.getElementById('form').addEventListener('submit', validarForm);
+    document.getElementById('form').addEventListener('submit', validarForm);
 }
 
 /* addInput */
@@ -51,18 +51,40 @@ function delInput(event) {
     event.preventDefault();
 }
 
-/* validarForm: mirar si hay campos vacios */
+/*  validarForm:
+    - campos vacios
+    - el DNI
+*/
+function validarForm(event) {
+    var val = true;
+    var inputs = document.getElementsByClassName('num')
+    for (let index = 0; index < inputs.length; index++) {
+        if (inputs[index].value == '') {
+            inputs[index].style.border = "solid red 1px";
+            val = false
+        } else {
+            inputs[index].style.border = "solid green 1px";
+        }
+    }
+    if (!validarDNI() || !val) {
+        event.preventDefault()
+    }
+
+
+}
 
 /* validarDNI */
 function validarDNI() {
-
+    var val = true;
     var dni = document.getElementById('dni');
     if (dni.value.length == 9) {
         //console.log('DNI válido');
-        dni.style.border = "solid green 5px";
+        dni.style.border = "solid green 1px";
     } else {
-        dni.style.border = "solid red 5px";
+        dni.style.border = "solid red 1px";
+        val = false
     }
+    return val;
 
 }
 /* Mostrar categoría a partir de la fecha de nacimiento */

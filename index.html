@@ -11,10 +11,28 @@
 
 <body>
     <form action="random.php" method="POST" id="form">
-        <div> <label for="dni">DNI: </label><input type="text" name="dni" id="dni"></div>
-        <div> <label for="nac">Fecha de nacimiento: </label><input type="date" name="nac" id="nac">
-            <p id="msg"></p>
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <div> <label for="dni">DNI: </label></div>
+                </td>
+                <td><input type="text" name="dni" id="dni"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <div> <label for="nac">Fecha de nacimiento: </label>
+                    </div>
+                </td>
+                <td><input type="date" name="nac" id="nac">
+
+                </td>
+                <td>
+                    <p id="msg"></p>
+                </td>
+            </tr>
+        </table>
+
 
         <div id="values">
             <div class="input"> <label for="valor-1">Valor 1: </label><input type="number" name="valor-1" id="valor-1" class="num"></div>
